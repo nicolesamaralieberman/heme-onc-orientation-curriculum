@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heme/Onc Fellowship Orientation Curriculum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2744;--teal:#1d9e75;--teal-light:#e1f5ee;--teal-mid:#9fe1cb;--amber:#ba7517;--amber-light:#faeeda;--coral:#d85a30;--coral-light:#faece7;--purple:#534ab7;--purple-light:#eeedfe;--blue:#185fa5;--blue-light:#e6f1fb;--gray-light:#f8f7f4;--gray-border:#e8e6df;--text-primary:#0f2744;--text-muted:#5a6a7a;--white:#ffffff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--gray-light);color:var(--text-primary);min-height:100vh}
+.site-header{background:var(--navy);padding:3rem 2rem 2.5rem;text-align:center;position:relative;overflow:hidden}
+.site-header::before{content:'';position:absolute;top:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:1px solid rgba(29,158,117,0.15)}
+.site-header::after{content:'';position:absolute;bottom:-80px;left:-40px;width:220px;height:220px;border-radius:50%;border:1px solid rgba(255,255,255,0.06)}
+.header-eyebrow{font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-mid);margin-bottom:.75rem}
+.header-title{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3.2rem);color:var(--white);line-height:1.15;margin-bottom:.75rem}
+.header-subtitle{font-size:15px;color:rgba(255,255,255,0.55);font-weight:300;max-width:520px;margin:0 auto 2rem;line-height:1.6}
+.header-badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.badge{background:rgba(29,158,117,0.15);color:var(--teal-mid);border:1px solid rgba(29,158,117,0.25);border-radius:100px;font-size:12px;font-weight:500;padding:5px 14px}
+
+/* ASSESSMENT BANNER */
+.assessment-banner{background:var(--white);border-bottom:1px solid var(--gray-border);padding:1.25rem 2rem}
+.assessment-inner{max-width:1100px;margin:0 auto;display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.assessment-label{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);flex-shrink:0;margin-right:.5rem}
+.assess-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;border:1px solid;transition:all 0.15s}
+.assess-btn-pre{background:var(--blue-light);color:var(--blue);border-color:rgba(24,95,165,0.25)}
+.assess-btn-pre:hover{background:#d4e8f8;border-color:var(--blue)}
+.assess-btn-post{background:var(--teal-light);color:#0f6e56;border-color:rgba(29,158,117,0.25)}
+.assess-btn-post:hover{background:#c5edd9;border-color:var(--teal)}
+.assess-btn-efficacy{background:var(--purple-light);color:var(--purple);border-color:rgba(83,74,183,0.25)}
+.assess-btn-efficacy:hover{background:#dddcfb;border-color:var(--purple)}
+
+/* NAV */
+.week-nav{background:var(--white);border-bottom:1px solid var(--gray-border);padding:0 2rem;display:flex;gap:0;overflow-x:auto;justify-content:center;position:sticky;top:0;z-index:100}
+.week-nav a{font-size:13px;font-weight:500;color:var(--text-muted);text-decoration:none;padding:1rem 1.25rem;border-bottom:2px solid transparent;white-space:nowrap;transition:color 0.15s,border-color 0.15s}
+.week-nav a:hover{color:var(--teal);border-bottom-color:var(--teal)}
+
+.container{max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+
+/* WEEK LABEL */
+.week-label{display:flex;align-items:center;gap:1rem;margin:3rem 0 1.25rem}
+.week-label h2{font-family:'DM Serif Display',serif;font-size:1.5rem;color:var(--navy);white-space:nowrap}
+.week-label-line{flex:1;height:1px;background:var(--gray-border)}
+.week-label-tag{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);white-space:nowrap}
+
+/* DAY CARD */
+.day-card{background:var(--white);border:1px solid var(--gray-border);border-radius:16px;margin-bottom:1.25rem;overflow:hidden}
+.day-header{display:grid;grid-template-columns:auto 1fr;cursor:pointer;transition:background 0.15s}
+.day-header:hover .day-header-main{background:#fafaf8}
+.day-number-col{width:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem 0;border-right:1px solid var(--gray-border)}
+.day-num{font-family:'DM Serif Display',serif;font-size:1.8rem;line-height:1;color:var(--navy)}
+.day-label-small{font-size:9px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-top:2px}
+.day-header-main{padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.day-title{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--navy);line-height:1.25}
+.day-subtitle{font-size:12px;color:var(--text-muted);margin-top:3px}
+.day-theme-tag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0}
+.expand-icon{color:var(--text-muted);font-size:18px;transition:transform 0.25s;flex-shrink:0;margin-left:8px}
+.day-card.open .expand-icon{transform:rotate(180deg)}
+
+/* CONTENT GRID */
+.day-content{display:none;border-top:1px solid var(--gray-border)}
+.day-card.open .day-content{display:block}
+.content-grid{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:0}
+@media(max-width:700px){.content-grid{grid-template-columns:1fr}}
+.content-col{padding:1.5rem;border-right:1px solid var(--gray-border)}
+.content-col:last-child{border-right:none}
+.col-header{display:flex;align-items:center;gap:8px;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--gray-border)}
+.col-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px}
+.col-title{font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted)}
+.col-duration{font-size:11px;font-weight:300;text-transform:none;letter-spacing:0}
+
+/* Pre-work */
+.prework-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:10px}
+.prework-dot{width:6px;height:6px;border-radius:50%;margin-top:6px;flex-shrink:0;background:var(--teal)}
+.prework-dot-opt{background:var(--amber)}
+.prework-dot-mini{background:var(--blue)}
+.prework-text{font-size:13px;line-height:1.5;color:var(--text-primary)}
+.prework-text a{color:var(--teal);text-decoration:none}
+.prework-text a:hover{text-decoration:underline}
+.prework-time{font-size:11px;color:var(--text-muted);margin-top:1px}
+.prework-optional{font-size:10px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:0.1em}
+
+/* Didactic */
+.topic-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:10px}
+.topic-num{font-size:10px;font-weight:600;background:var(--navy);color:white;border-radius:4px;padding:1px 6px;margin-top:3px;flex-shrink:0;letter-spacing:0.03em}
+.topic-text{font-size:13px;line-height:1.5;color:var(--text-primary)}
+.topic-note{margin-top:.75rem;padding:10px;background:var(--teal-light);border-radius:8px}
+.topic-note-label{font-size:11px;font-weight:600;color:#0f6e56;margin-bottom:3px}
+.topic-note-text{font-size:12px;color:#0f6e56;line-height:1.5}
+
+/* Activities */
+.activity-item{margin-bottom:10px}
+.activity-link{display:flex;align-items:flex-start;gap:8px;text-decoration:none;padding:8px 10px;border-radius:8px;border:1px solid var(--gray-border);background:var(--gray-light);transition:border-color 0.15s,background 0.15s}
+.activity-link:hover{border-color:var(--teal);background:var(--teal-light)}
+.activity-link-icon{width:14px;height:14px;flex-shrink:0;margin-top:2px;color:var(--teal)}
+.activity-link-text{flex:1}
+.activity-name{font-size:13px;font-weight:500;color:var(--text-primary);line-height:1.4}
+.activity-meta{display:flex;gap:6px;align-items:center;margin-top:3px;flex-wrap:wrap}
+.activity-time{font-size:11px;color:var(--text-muted)}
+.activity-obj{font-size:10px;background:var(--blue-light);color:var(--blue);border-radius:4px;padding:1px 6px;font-weight:500}
+.activity-coming{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:8px;border:1px dashed var(--gray-border);opacity:0.55}
+.activity-coming .activity-name{color:var(--text-muted)}
+.quiz-btn{display:flex;align-items:center;gap:8px;text-decoration:none;padding:10px 12px;border-radius:8px;background:var(--amber-light);border:1px solid rgba(186,117,23,0.25);transition:all 0.15s;margin-top:.5rem}
+.quiz-btn:hover{background:#f5d98a;border-color:var(--amber)}
+.quiz-btn-text{font-size:13px;font-weight:600;color:var(--amber)}
+.quiz-btn-sub{font-size:11px;color:rgba(186,117,23,0.8);margin-top:1px}
+.wrap-box{margin-top:.5rem;padding:8px 10px;border-radius:8px;background:#fafaf8;border:1px solid var(--gray-border)}
+.wrap-label{font-size:11px;font-weight:600;color:var(--text-muted)}
+.wrap-sub{font-size:12px;color:var(--text-muted);margin-top:2px}
+
+/* OBJ STRIP */
+.obj-strip{padding:1rem 1.5rem;border-top:1px solid var(--gray-border);background:var(--gray-light);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.obj-strip-label{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-right:4px}
+.obj-pill{font-size:11px;font-weight:500;padding:3px 9px;border-radius:100px;border:1px solid var(--gray-border);color:var(--text-muted);background:white}
+
+/* THEMES */
+.theme-heme{background:var(--teal-light);color:#0f6e56}
+.theme-leuk{background:var(--blue-light);color:#0c447c}
+.theme-lymph{background:var(--purple-light);color:#3c3489}
+.theme-solid{background:#fbeaf0;color:#72243e}
+.theme-gi{background:var(--amber-light);color:#633806}
+.theme-nccn{background:var(--coral-light);color:#712b13}
+.theme-emergency{background:#fcebeb;color:#791f1f}
+.theme-support{background:var(--teal-light);color:#085041}
+.theme-clinic{background:var(--purple-light);color:#26215c}
+.theme-future{background:var(--blue-light);color:#042c53}
+.icon-prework{background:var(--teal-light)}
+.icon-didactic{background:var(--blue-light)}
+.icon-workshop{background:var(--amber-light)}
+
+/* LEGEND */
+.legend{background:white;border:1px solid var(--gray-border);border-radius:12px;padding:1rem 1.5rem;margin-bottom:2rem;display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text-muted)}
+.legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* FOOTER */
+.site-footer{text-align:center;padding:2rem;font-size:12px;color:var(--text-muted);border-top:1px solid var(--gray-border);background:white}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-eyebrow">Hematology &amp; Oncology Fellowship</div>
+  <h1 class="header-title">Orientation Curriculum</h1>
+  <p class="header-subtitle">A 10-day schema-building curriculum. Each day builds a clinical mental model you will carry into fellowship and beyond.</p>
+  <div class="header-badges">
+    <span class="badge">10 Days</span>
+    <span class="badge">50 Learning Objectives</span>
+    <span class="badge">ACGME Aligned</span>
+    <span class="badge">Blended Learning</span>
+  </div>
+</header>
+
+<div class="assessment-banner">
+  <div class="assessment-inner">
+    <span class="assessment-label">Assessments</span>
+    <a class="assess-btn assess-btn-pre" href="https://docs.google.com/forms/d/e/1FAIpQLSeEC2o9EemjQGNq9_Y7CioOHk5CKgpJHg36Li-tE7rT9W_2mg/viewform?usp=header" target="_blank">📋 Pre-Test — Complete Before Day 1</a>
+    <a class="assess-btn assess-btn-post" href="https://docs.google.com/forms/d/e/1FAIpQLScVMvdnF0oAboY4mzXIoEiWVpt9PyadTHHNjx_rBl326WcqQQ/viewform?usp=header" target="_blank">✅ Post-Test — Complete on Day 10</a>
+    <a class="assess-btn assess-btn-efficacy" href="https://docs.google.com/forms/d/e/1FAIpQLSe8tqkTal_BIpuI4DRjzq_cGzN7_N9baoh3M29WULWpLdGQqw/viewform?usp=header" target="_blank">📊 Self-Efficacy Survey — Pre, Post &amp; 3-Month</a>
+  </div>
+</div>
+
+<nav class="week-nav">
+  <a href="#week1">Days 1–5 · Disease-Based Foundations</a>
+  <a href="#week2">Days 6–10 · Cross-Cutting Concepts</a>
+</nav>
+
+<div class="container">
+
+<div class="legend">
+  <span style="font-size:12px;font-weight:600;color:var(--text-primary);margin-right:4px">Key:</span>
+  <span class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span>Required pre-work</span>
+  <span class="legend-item"><span class="legend-dot" style="background:var(--amber)"></span>Optional</span>
+  <span class="legend-item"><span class="legend-dot" style="background:var(--blue)"></span>Mini-activity / complete before session</span>
+  <span class="legend-item"><span style="font-size:10px;background:var(--blue-light);color:var(--blue);padding:1px 6px;border-radius:4px;font-weight:500">Obj #</span>Mapped objective</span>
+</div>
+
+<!-- PART I -->
+<div class="week-label" id="week1">
+  <div class="week-label-line"></div>
+  <span class="week-label-tag">Days 1–5 · Disease-Based Foundations</span>
+  <div class="week-label-line"></div>
+</div>
+
+<!-- DAY 1 -->
+<div class="day-card" id="day1">
+  <div class="day-header" onclick="toggleDay('day1')">
+    <div class="day-number-col"><div class="day-num">1</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Benign Hematology &amp; Coagulopathy</div></div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <span class="day-theme-tag theme-heme">Hematology Foundations</span>
+        <span class="expand-icon">▾</span>
+      </div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work <span class="col-duration">(~60 min)</span></span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1N59fB89V4u0Gcm9ELAnJJn7k534Pccdu/view" target="_blank">ASH Academy Anemia Slides ↗</a></div><div class="prework-time">20 min · Slides</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1Cu7gOLosSX-XRd6Hna2dZKzffSzlTSdi/view" target="_blank">TTP Review — JAMA 2025 ↗</a></div><div class="prework-time">30 min · Journal article</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1ljRvgNvuLsP2jOzkW6PFoZCp6fvpd4LN0dulM9OkB30/edit" target="_blank">CHEST VTE Guidelines — High-Yield Summary ↗</a></div><div class="prework-time">&lt;5 min · Quick reference</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1cBQhf68m3lQ2ofYCQzvalRzdRFjXWJ1dUiWWmFV-F5M/edit" target="_blank">Acquired Hemophilia A — High-Yield Summary ↗</a></div><div class="prework-time">&lt;5 min · Quick reference</div></div></div>
+        <div class="prework-item"><div class="prework-dot prework-dot-opt"></div><div><div class="prework-text"><a href="https://www.thefellowoncall.com/rotationguide-intro-to-hematopathology" target="_blank">Fellow on Call: Intro to Hematopathology Series ↗</a></div><div class="prework-time">3 hrs total · Podcast</div><div class="prework-optional">Optional</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(45 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">Anemia Schema — visualizing hemolysis vs. production failure</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">TTP Review — diagnostic criteria and PLEX timing</div></div>
+        <div class="topic-item"><span class="topic-num">3</span><div class="topic-text">Hemophilia Review — acquired vs. congenital</div></div>
+        <div class="topic-item"><span class="topic-num">4</span><div class="topic-text">Peripheral Smear Review — projected high-yield images (blasts, schistocytes, rouleaux)</div></div>
+        <div class="topic-note"><div class="topic-note-label">SMEAR SESSION (30 min)</div><div class="topic-note-text">Live digital slide review — fellows label key findings from projected images</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops <span class="col-duration">(75 min)</span></span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/15IaJKYlyKuXBH6kzGGzCwlFqdBRoT8Q_TDpy7ImFrMs/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Activity 1: The 2 AM Consult</div><div class="activity-meta"><span class="activity-time">25 min · Pairs</span><span class="activity-obj">Obj 2</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1nuXNd8JoMhu9e1_3tSsWSw-AhUH4FCUdqnL1Dbs-r6M/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Activity 2: Acquired Hemophilia Transfer &amp; Handoff</div><div class="activity-meta"><span class="activity-time">25 min · Role-play</span><span class="activity-obj">Obj 4</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/15QevEJhIopXGyUcwcXOMeBZdiiZ1ElXxPL6HI2PkJ50/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Activity 3: VTE Consult Note</div><div class="activity-meta"><span class="activity-time">15 min · Individual</span><span class="activity-obj">Obj 5</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeyliP-pVa-4RlsZj1ET_oIJ7DDaWXJr88jKgTeOnDOfO3hZw/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 1 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 1 — Differentiate life-threatening anemias</span><span class="obj-pill">Obj 2 — Outline TTP management</span><span class="obj-pill">Obj 3 — Identify key smear findings</span><span class="obj-pill">Obj 4 — Determine transfer for acquired hemophilia</span><span class="obj-pill">Obj 5 — Select VTE treatment by CHEST guidelines</span></div>
+  </div>
+</div>
+
+<!-- DAY 2 -->
+<div class="day-card" id="day2">
+  <div class="day-header" onclick="toggleDay('day2')">
+    <div class="day-number-col"><div class="day-num">2</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Leukemia &amp; Myelodysplastic Syndromes</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-leuk">Acute Leukemia</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://www.youtube.com/watch?v=u8fm4oCCm0s" target="_blank">Onc-Brothers: AML Community Treatment Overview ↗</a></div><div class="prework-time">25 min · Video (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1pWK582dydvYmLS-Q2a9_zMZ_RS5U7Iir/view" target="_blank">ELN 2022 AML Criteria — focus on Table 6 ↗</a></div><div class="prework-time">2 min · Skim</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://www.thefellowoncall.com/tfocpodcast/episode-001disclaimer-wfhgf-ml3b6-9m66a-8rrc4-k8w87-x7xdd" target="_blank">Fellow on Call: Hemepath Capstone, Pt. 2 ↗</a></div><div class="prework-time">30 min · Podcast (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1qOwb0037P2N4djJrbFTWpCzbQLZhuNnNkMmlRrOLjwI/edit" target="_blank">MDS NCCN Quick Hits ↗</a><span style="color:var(--text-muted);font-size:12px"> or </span><a href="https://drive.google.com/file/d/1Mc-60pB0Ab8ZZH40YHcKsnEqtElbTSmP/view" target="_blank">full NCCN MDS guidelines ↗</a></div><div class="prework-time">3–30 min</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://mds-risk-model.com/" target="_blank">Bookmark: IPSS-M Risk Calculator ↗</a></div><div class="prework-time">30 sec</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(45 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">The Acute Leukemia Workup Schema</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">Differentiating myeloid vs. lymphoid markers</div></div>
+        <div class="topic-item"><span class="topic-num">3</span><div class="topic-text">The "why" behind ATRA in APL — differentiation syndrome</div></div>
+        <div class="topic-item"><span class="topic-num">4</span><div class="topic-text">MDS Approach Schema</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/10BL1d94E_gbPMVdcBiAhQhuE9ZOFX4oass_qRgWWNzo/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">The Pathology Packet — AML/ALL Interpretation</div><div class="activity-meta"><span class="activity-time">60 min · Small groups</span><span class="activity-obj">Obj 6</span><span class="activity-obj">Obj 7</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1OFy7PYTaKFLkb2PoNECjKG-x1Fs6M2_ZXfUQ2fMOGq0/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Build the "New Leuk Check-in Checklist"</div><div class="activity-meta"><span class="activity-time">Included above</span><span class="activity-obj">Obj 10</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1GHdtRdTCvZhZ59TCAfNRG8Cpnhgvm3zCZnsOwdpAA94/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">MDS Sorting Hat — IPSS-R &amp; Treatment Selection</div><div class="activity-meta"><span class="activity-time">30 min</span><span class="activity-obj">Obj 9</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdr1cRBT2Ld6GUNrB_QIY3n3sw0Tn5-GAgqH0bbZwcEMXNZ0Q/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 2 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 6 — Interpret path/cytogenetic data</span><span class="obj-pill">Obj 7 — Classify AML risk (ELN 2022)</span><span class="obj-pill">Obj 8 — Explain ATRA toxicity</span><span class="obj-pill">Obj 9 — Select MDS treatment by IPSS-R</span><span class="obj-pill">Obj 10 — Construct new patient evaluation checklist</span></div>
+  </div>
+</div>
+
+<!-- DAY 3 -->
+<div class="day-card" id="day3">
+  <div class="day-header" onclick="toggleDay('day3')">
+    <div class="day-number-col"><div class="day-num">3</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Lymphoma &amp; Multiple Myeloma</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-lymph">Lymphoid Malignancies</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1vX-dAaFQij5yQ0564saSBkslws_7br2xUgKQi1mysrw/edit" target="_blank">B-Cell NHL Review — Summary ↗</a><span style="color:var(--text-muted);font-size:12px"> or </span><a href="https://drive.google.com/file/d/1gN9dLY7lv2x55mhiHCSKeQJ-Ar9v1RGV/view" target="_blank">full Lancet 2024 article ↗</a></div><div class="prework-time">30 min · Reading</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://www.youtube.com/watch?v=1yOVDpZapaU" target="_blank">Onc Brothers: Newly Diagnosed Multiple Myeloma with Dr. Costello ↗</a></div><div class="prework-time">22 min · Video (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1BRWpHvbHZ5EqVYZGt_3W0tdQkZbGNJzDbRnJKkUqZuE/edit" target="_blank">DLBCL Classification Overview — Hans Algorithm ↗</a></div><div class="prework-time">5 min · Reference</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(45 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">The Lymphoma Buckets — Indolent vs. Aggressive</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">The Plasma Cell Dyscrasia Spectrum — MGUS → SMM → MM</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1QbXaGeJ6QvrD3unThnipYOxcgaipsE1ZAGQ10Aha3sc/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">The Hans Algorithm Worksheet + IPI Calculation</div><div class="activity-meta"><span class="activity-time">45 min</span><span class="activity-obj">Obj 11</span><span class="activity-obj">Obj 12</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1Qnvj-dj3p2wTFG0PQURUURSgcm--SUjZA4bjCTIehuU/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Is it Myeloma? — SLIM-CRAB Differentiation</div><div class="activity-meta"><span class="activity-time">45 min</span><span class="activity-obj">Obj 13</span><span class="activity-obj">Obj 14</span><span class="activity-obj">Obj 15</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdo9-XlNvsq_yCd6x7JWSWmY0JZJrL6423Ka1VBjMd3tzjNRg/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 3 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 11 — Apply Hans' algorithm (DLBCL)</span><span class="obj-pill">Obj 12 — Calculate IPI score</span><span class="obj-pill">Obj 13 — Identify SLIM-CRAB/IMWG features</span><span class="obj-pill">Obj 14 — List essential MM staging workup</span><span class="obj-pill">Obj 15 — Select workup for MGUS/SMM</span></div>
+  </div>
+</div>
+
+<!-- DAY 4 -->
+<div class="day-card" id="day4">
+  <div class="day-header" onclick="toggleDay('day4')">
+    <div class="day-number-col"><div class="day-num">4</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Breast &amp; Genitourinary Cancer</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-solid">Solid Tumors I</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://open.spotify.com/episode/25JGKE4LyPXOAEJbKUZf54?si=k_35XiTfT9KiGqs34p1_ng" target="_blank">Two Onc Docs: Localized Breast Cancer 2025 Update ↗</a></div><div class="prework-time">17 min · Podcast (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1FNOQS7bJ7ELnZ5IR4vPEwUoM4PXi3up9/view" target="_blank">2023 ASCO HER2 Testing Guidelines ↗</a></div><div class="prework-time">10 min · Reading</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/u/0/d/1SZZBb6dxVjEfiJEtdubpcRJaEeMTz99ZXt1dUrGnHn8/edit" target="_blank">Prostate Cancer Staging &amp; Management (NCCN) ↗</a></div><div class="prework-time">5 min · Reading</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://labels.fda.gov/" target="_blank">Resource Familiarization: FDA Labels ↗</a></div><div class="prework-time">10 min</div></div></div>
+        <div class="prework-item"><div class="prework-dot prework-dot-mini"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1G6-7te4jGa-SisOy6ynJGnleuM7VRQ0WAi1zPZQUegA/edit" target="_blank">Example TCHP Treatment Plan — Review Before Session ↗</a></div><div class="prework-time">5 min · Reference</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(45 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">The Breast Cancer Grid — ER/PR/HER2 receptor subtypes</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">Prostate Cancer Risk Stratification groupings</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1wr84zNS1siby2ITWkLLHU70mGkyARrvNjnyhBxFlJNY/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">New Prostate Cancer Patient — Pre-Staffing Audit</div><div class="activity-meta"><span class="activity-time">Workshop</span><span class="activity-obj">Obj 18</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1JgipVxmf-F2AsKuT6FdT6VcNNuducz4ZXJ1RG2rDVqk/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">New Breast Cancer Patient — HER2 Audit, Staging, MDC Critique</div><div class="activity-meta"><span class="activity-time">Workshop</span><span class="activity-obj">Obj 16</span><span class="activity-obj">Obj 17</span><span class="activity-obj">Obj 19</span><span class="activity-obj">Obj 20</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScD9vOx5T0Yets5063V9UiONqr_vKpH95IAiKX0RdPA94Vrqg/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 4 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 16 — Determine HER2 testing necessity</span><span class="obj-pill">Obj 17 — Differentiate anatomic vs. prognostic staging</span><span class="obj-pill">Obj 18 — Complete prostate pre-staffing form</span><span class="obj-pill">Obj 19 — Identify safe docetaxel administration</span><span class="obj-pill">Obj 20 — Critique MDC documentation</span></div>
+  </div>
+</div>
+
+<!-- DAY 5 -->
+<div class="day-card" id="day5">
+  <div class="day-header" onclick="toggleDay('day5')">
+    <div class="day-number-col"><div class="day-num">5</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Gastrointestinal &amp; Thoracic Cancer</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-gi">Solid Tumors II</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1NyUbfadybBRZxS38ngxn__shs-RFCOUy/view" target="_blank">Lung Cancer Driver Mutations: A Primer (video) ↗</a><span style="color:var(--text-muted);font-size:12px"> · </span><a href="https://docs.google.com/document/d/14tg_DvG-PUJpNkXw7ekr9WMKVMZ4q6dxpIefLussOXc/edit" target="_blank">Notes ↗</a></div><div class="prework-time">7 min · Video</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://open.spotify.com/episode/0IhkFGaOAdpR5dnhg9Jj6a?si=b7cBp_2MQ_6-ISw1DOBgeA&amp;nd=1&amp;dlsi=6b975e1b84394a71" target="_blank">Fellow on Call: Lung Cancer Series Pt. 2 — Histology &amp; Staging ↗</a></div><div class="prework-time">28 min · Podcast (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1-KgMWFiC1VMO6iNwZrbvvkdGutJAVYSY6iIsCvkUA58/edit" target="_blank">Categorizing Treatment Intent — Reading ↗</a></div><div class="prework-time">5 min</div></div></div>
+        <div class="prework-item"><div class="prework-dot prework-dot-mini"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/15ZFXxUk6i_jtvoA0VqQyaLqUwFTe1T12QaFNWmENhbs/edit" target="_blank">Mini-Activity: Categorizing Treatment Intent ↗</a></div><div class="prework-time">5 min · Complete before session</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(45 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">The Genomic Triage of NSCLC and CRC</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">Defining "Curative" vs. "Palliative" vs. "Life-Prolonging"</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1MdwuqDCXeaFVQKoc6eZiQEuzliIPrJfdtNSbWSuTNtM/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">The Mutation Hunter — Case 1 (Lung)</div><div class="activity-meta"><span class="activity-time">45 min</span><span class="activity-obj">Obj 21</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/16257dBaVZ_xbSSdu0cmMbmxGfIlwA6udlbAn0KPRjVY/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">The Mutation Hunter — Case 2 (CRC)</div><div class="activity-meta"><span class="activity-time">Included above</span><span class="activity-obj">Obj 21</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1j_Q1RYlUvlAvsOeq_MRLVg6e_DmdWc4wZDyPDn-mOO8/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Pre-Therapy Verification Checklist</div><div class="activity-meta"><span class="activity-time">Included above</span><span class="activity-obj">Obj 21</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1Ue2md6-nUWwxqXU-RK-m7_dajmMJNuYcXPavTQ87R6k/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Pancreatic Puzzle — Workup Gap Analysis</div><div class="activity-meta"><span class="activity-time">45 min</span><span class="activity-obj">Obj 23</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1j63yZ5hVw6mFVpmrWg6do7ONQsPtrEFX4KqxbPMaN2k/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Neuropathy Know-How — Dose Reduction (FOLFIRINOX)</div><div class="activity-meta"><span class="activity-time">Included above</span><span class="activity-obj">Obj 24</span><span class="activity-obj">Obj 25</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSemZ8Min9JpSr-ZqbONQDjZ8Q7GXOtrcmobO6q_qL118o8vcw/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 5 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 21 — Genomic triage</span><span class="obj-pill">Obj 22 — Categorize treatment intent</span><span class="obj-pill">Obj 23 — Execute diagnostic audit (pancreatic)</span><span class="obj-pill">Obj 24 — Evidence-based dose modification</span><span class="obj-pill">Obj 25 — Resolve NCCN vs. FDA vs. trial</span></div>
+  </div>
+</div>
+
+<!-- PART II -->
+<div class="week-label" id="week2">
+  <div class="week-label-line"></div>
+  <span class="week-label-tag">Days 6–10 · Cross-Cutting Concepts</span>
+  <div class="week-label-line"></div>
+</div>
+
+<!-- DAY 6 -->
+<div class="day-card" id="day6">
+  <div class="day-header" onclick="toggleDay('day6')">
+    <div class="day-number-col"><div class="day-num">6</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Applied NCCN &amp; Tumor Board Prep</div><div class="day-subtitle">Theme: How to do the Job — Navigation &amp; Presentation</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-nccn">Applied Practice</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1Bg8vyHRWil48h1gpHg0PhNHswtAT2x4z/view" target="_blank">KATHERINE Trial — NEJM 2019 ↗</a><span style="color:var(--text-muted);font-size:12px"> · </span><a href="https://docs.google.com/document/d/1Y2cIcbVL-QqqTnB8eKJ6g3cMovT4IDUuCEV0C6oCXco/edit" target="_blank">Framework Overview ↗</a></div><div class="prework-time">10 min · Reading</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1SSOj1_T-kTj_LayVASdVcTR9AdTOUhNY/view" target="_blank">Intro to the Multidisciplinary Tumor Board (video) ↗</a><span style="color:var(--text-muted);font-size:12px"> · </span><a href="https://docs.google.com/document/d/1FiAA9IfTHxLyjmU--IZcwWvcFmR7OaHqhVClOxT9bII/edit" target="_blank">Reading ↗</a></div><div class="prework-time">7 min · Video</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1KA36vqDpZ7qDP27XGOyd7TZ5VChLBnkq/view" target="_blank">Testicular Cancer Introductory Podcast ↗</a><span style="color:var(--text-muted);font-size:12px"> · </span><a href="https://docs.google.com/document/d/1xeeYmue8EMiJqSQJVtASakT48RnTEajpiEs7zyF9JiY/edit" target="_blank">Schema Notes ↗</a></div><div class="prework-time">22 min · Audio</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(30 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">Beyond the Algorithm: NCCN Review</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">The Neoadjuvant "Why" — when intra-op pathology changes systemic treatment</div></div>
+        <div class="topic-item"><span class="topic-num">3</span><div class="topic-text">The Rare Tumor Framework — NCCN/UpToDate for tumors you see once a year</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops <span class="col-duration">(90 min)</span></span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1syEs9MJ3ln8b7PwqBsbrVw5nJYo8WVM0fdHZdXbzKFE/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Mock Tumor Board — Instructions</div><div class="activity-meta"><span class="activity-time">90 min total</span><span class="activity-obj">Obj 28</span><span class="activity-obj">Obj 29</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1_jGkBSgi3AAtPoYNQNuy_XFsGizCzhISiPYOS63r6hY/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Tumor Board Case 1 — Hematology (Myeloma Relapse)</div><div class="activity-meta"><span class="activity-time">Case folder</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1rAcg_wDpZsQt1HtSQvWJ-NtV8ZWGkkTkQP5JszIOe2k/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Tumor Board Case 2 — GU (Testicular NSGCT)</div><div class="activity-meta"><span class="activity-time">Case folder</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1cBHN5u-V2k2x8VmJ6XYfEzIjAHSfUN5Lx24oQFKmBVo/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Tumor Board Case 3 — Dermatology (Melanoma)</div><div class="activity-meta"><span class="activity-time">Case folder</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd98VT8jjgwL57nI5ltcDo3ci2ewgMkt_537_RyI_ye3Cmalw/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 6 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 26 — Select treatment using NCCN</span><span class="obj-pill">Obj 27 — Analyze neoadjuvant rationale</span><span class="obj-pill">Obj 28 — Prepare Tumor Board med onc section</span><span class="obj-pill">Obj 29 — Correct Tumor Board submission data</span><span class="obj-pill">Obj 30 — Construct schema for rare tumor workup</span></div>
+  </div>
+</div>
+
+<!-- DAY 7 -->
+<div class="day-card" id="day7">
+  <div class="day-header" onclick="toggleDay('day7')">
+    <div class="day-number-col"><div class="day-num">7</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Advanced Triage &amp; Safety</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-emergency">Oncologic Emergencies</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://www.thefellowoncall.com/tfocpodcast/episode-001disclaimer-wfhgf-ml3b6-9m66a-8rrc4-k8w87-x7xdd-wrzye-4xg8x-t73gt-cxc5s-nmg8f?rq=emergencie" target="_blank">Fellow on Call Ep. 012: Heme/Onc Emergencies Pt. 1 — SVC Syndrome ↗</a></div><div class="prework-time">36 min · Podcast (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/12kMEkSPeVk6CHyztJUK6nl5uPlH0L3ww/view" target="_blank">Spinal Cord Compression Video ↗</a></div><div class="prework-time">6 min · Video</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1rVZXaR71cU0160RkK0etOgOJsk8LuwYipJUgEZl13Ek/edit" target="_blank">TLS &amp; Venetoclax Overview Notes ↗</a><span style="color:var(--text-muted);font-size:12px"> · </span><a href="https://drive.google.com/file/d/1UuzZacxUa1ZE13Ii8yDOONwXeU19pnNc/view" target="_blank">Full Paper (Blood 2020) ↗</a></div><div class="prework-time">10 min · Reading</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(45 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">The "Structural vs. Metabolic" Emergency Schema</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">SVC Syndrome — SCLC vs. Lymphoma approaches</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1aSlh2-I7lfRtrOfRbYZ-RTjC2axYh8dYu5zrHzc_suY/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Emergency Triage Case 1 — Spinal Cord Compression</div><div class="activity-meta"><span class="activity-time">60 min total</span><span class="activity-obj">Obj 31</span><span class="activity-obj">Obj 33</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1ff503ijOGi6aD-LQXDKpjoYNjEx7CKXd2K9yvK4f6dI/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Emergency Triage Case 2 — Tumor Lysis Syndrome</div><div class="activity-meta"><span class="activity-time">Included above</span><span class="activity-obj">Obj 32</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1V-vjxx5dFU5Uv61gVl9VWhnkSwChJalSqgDE5TjHH5Q/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Role-Play: The Difficult Patient Call</div><div class="activity-meta"><span class="activity-time">45 min</span><span class="activity-obj">Obj 35</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfT1sUoftyKS4qOY6FKa7XvtH1rryOvhyOPYcelv5Sjt34scg/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 7 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 31 — Triage spinal cord compression</span><span class="obj-pill">Obj 32 — Identify TLS workup &amp; prophylaxis</span><span class="obj-pill">Obj 33 — Differentiate SVC workup by tumor type</span><span class="obj-pill">Obj 34 — Explain chemo vs. targeted approach</span><span class="obj-pill">Obj 35 — Construct patient anxiety response</span></div>
+  </div>
+</div>
+
+<!-- DAY 8 -->
+<div class="day-card" id="day8">
+  <div class="day-header" onclick="toggleDay('day8')">
+    <div class="day-number-col"><div class="day-num">8</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Cancer Complications &amp; Supportive Care</div><div class="day-subtitle">Theme: The Floor at 0200 — Inpatient Survival</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-support">Inpatient Skills</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1GziuoX4cup0achYIqWXfrDgmpkhEUSFJ/view" target="_blank">Febrile Neutropenia High-Yield Summary ↗</a></div><div class="prework-time">5 min · Quick reference</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1iThbEzo1BPoCmxmfKi7oWII3XgA1Ks_u/view" target="_blank">IDSA Fever &amp; Neutropenia Guidelines 2010 ↗</a><span style="color:var(--text-muted);font-size:12px"> · </span><a href="https://drive.google.com/file/d/1hMlG2FG8-lS4iLZkhNB5Xh24b7OxWGBC/view" target="_blank">ASCO 2018 Update ↗</a></div><div class="prework-time">~15 min · Guidelines</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://open.spotify.com/episode/5TEMKNTVo3SY5xo0vciMAr?si=5d21490e37064165" target="_blank">Two-Onc Docs: Oncologic Emergencies 2025 Update ↗</a></div><div class="prework-time">12 min · Podcast (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://www.youtube.com/watch?v=7M9p3V8IFhY" target="_blank">Rotating Opioids (video) ↗</a></div><div class="prework-time">10 min · Video (external)</div></div></div>
+        <div class="prework-item"><div class="prework-dot prework-dot-mini"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1BXazjtQ1-hbN7ryi-j5jmlpmEq4Q3QYp/view" target="_blank">CTCAE v5 Quick Reference — Download for Use ↗</a></div><div class="prework-time">Reference card</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(45 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">Supportive Care Frameworks</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">Hypercalcemia of Malignancy — Fluids → Calcitonin → Bisphosphonates</div></div>
+        <div class="topic-item"><span class="topic-num">3</span><div class="topic-text">Febrile Neutropenia — MASCC scoring &amp; empiric coverage decisions</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1EgRuj_4J7tbj3yJcn86EIxhBaYseOTUDVgqFJ4m03H8/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">The Floor @ 0200 — FN, Hypercalcemia, Multi-Toxicity Triage</div><div class="activity-meta"><span class="activity-time">Workshop</span><span class="activity-obj">Obj 36</span><span class="activity-obj">Obj 37</span><span class="activity-obj">Obj 38</span><span class="activity-obj">Obj 40</span></div></div></a></div>
+        <div class="activity-coming"><svg class="activity-link-icon" style="opacity:0.4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div><div class="activity-name">Consults @ 0200 — Opioid Rotation &amp; Breakthrough Dosing</div><div class="activity-meta"><span class="activity-time">Workshop</span><span style="font-size:10px;color:var(--text-muted)">Obj 39</span></div></div></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdKLNT1Kpstegxf8AeEE-jZCMH_4uSksS9oFAHQY-KpXQ08DA/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 8 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 36 — Febrile neutropenia risk stratification</span><span class="obj-pill">Obj 37 — Hypercalcemia severity-tiered management</span><span class="obj-pill">Obj 38 — Multi-toxicity inpatient triage</span><span class="obj-pill">Obj 39 — Opioid rotation &amp; breakthrough dosing</span><span class="obj-pill">Obj 40 — After-hours triage logic</span></div>
+  </div>
+</div>
+
+<!-- DAY 9 -->
+<div class="day-card" id="day9">
+  <div class="day-header" onclick="toggleDay('day9')">
+    <div class="day-number-col"><div class="day-num">9</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">The Outpatient Clinic &amp; Difficult Conversations</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-clinic">Communication &amp; Clinic</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1e0MfQj-iNETEgogzdrwDHKtN4cAaaFgx/view" target="_blank">Gift of Truth — Art of Oncology (ASCO, Nov 2023) ↗</a></div><div class="prework-time">5 min · Reading</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1WDq0PRM02taxJXS3_prz91zPnDbbjJna/view" target="_blank">Serious Illness Conversation Guide — Ariadne Labs ↗</a></div><div class="prework-time">2 min · Skim</div></div></div>
+        <div class="prework-item"><div class="prework-dot"></div><div><div class="prework-text"><a href="https://drive.google.com/file/d/1zILKt62tgzbbnsYS4xLNPycuz4wirMH-/view" target="_blank">The New Patient Visit: A Framework for Fellows (video) ↗</a><span style="color:var(--text-muted);font-size:12px"> or </span><a href="https://drive.google.com/file/d/1Is_yiENAGZS_4LmwG2rK5LZ7gOy84Po2/view" target="_blank">Read the overview ↗</a></div><div class="prework-time">7–10 min</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics <span class="col-duration">(30 min)</span></span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">The New Patient Visit — SOAP-I framework and documentation</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">Handoffs: The Three-Tier Taxonomy (Urgent / Time-Sensitive / Anticipatory)</div></div>
+        <div class="topic-item"><span class="topic-num">3</span><div class="topic-text">Serious Illness Communication — one framework, five sentences</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1By_tkVy4MS029MK1no8eW0gKs6FoPdmVJ0VOMdglayg/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Workshop 1: The New Patient Visit — Synthesis, Pathologist Questions, Handoff Triage</div><div class="activity-meta"><span class="activity-time">75 min</span><span class="activity-obj">Obj 41</span><span class="activity-obj">Obj 42</span><span class="activity-obj">Obj 43</span><span class="activity-obj">Obj 45</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1gexknw1BWqt7JWBO8nYgzwJ-S1gjFfTvn2m4dRlvy-g/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Workshop 2: Difficult Conversations — Treatment Intent Shift Role-Play</div><div class="activity-meta"><span class="activity-time">45 min</span><span class="activity-obj">Obj 44</span></div></div></a></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLScqEcMwQ6Hm29cHXMJSwQ8FCVrDyZk9XPHpMxu-n9O9kC4SyA/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 9 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 41 — New patient note synthesis</span><span class="obj-pill">Obj 42 — Pathologist communication</span><span class="obj-pill">Obj 43 — High-risk handoff identification</span><span class="obj-pill">Obj 44 — Serious illness communication role-play</span><span class="obj-pill">Obj 45 — Clinic-to-inpatient safety bridge</span></div>
+  </div>
+</div>
+
+<!-- DAY 10 -->
+<div class="day-card" id="day10">
+  <div class="day-header" onclick="toggleDay('day10')">
+    <div class="day-number-col"><div class="day-num">10</div><div class="day-label-small">Day</div></div>
+    <div class="day-header-main">
+      <div><div class="day-title">Cross-Cutting Concepts</div><div class="day-subtitle">Theme: The Future — Cell Therapy, Genomics &amp; Reflection</div></div>
+      <div style="display:flex;align-items:center;gap:10px"><span class="day-theme-tag theme-future">Capstone</span><span class="expand-icon">▾</span></div>
+    </div>
+  </div>
+  <div class="day-content">
+    <div class="content-grid">
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-prework">📖</div><span class="col-title">Pre-Work</span></div>
+        <div class="prework-item"><div class="prework-dot prework-dot-opt"></div><div><div class="prework-text"><a href="https://ascopubs.org/do/icpi-overview-management-iraes-guideline-part-1" target="_blank">ASCO irAE Guideline Overview ↗</a></div><div class="prework-time">13 min · Podcast (external)</div><div class="prework-optional">Optional</div></div></div>
+        <div class="prework-item"><div class="prework-dot prework-dot-mini"></div><div><div class="prework-text"><a href="https://docs.google.com/document/d/1Z-spMEzxM_J8zIWskFBR_Ii0VRP4zs9x58sztE-wrmc/edit" target="_blank">Mini-Activity — Complete Before Session ↗</a></div><div class="prework-time">5 min</div></div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-didactic">🎓</div><span class="col-title">Didactics</span></div>
+        <div class="topic-item"><span class="topic-num">1</span><div class="topic-text">CAR-T &amp; Bispecifics — CRS and ICANS recognition and escalation</div></div>
+        <div class="topic-item"><span class="topic-num">2</span><div class="topic-text">irAE Grade-Based Management — ICI steroid framework</div></div>
+        <div class="topic-item"><span class="topic-num">3</span><div class="topic-text">NGS and ctDNA — actionable vs. uncertain significance</div></div>
+        <div class="topic-item"><span class="topic-num">4</span><div class="topic-text">Cellular Therapy &amp; Transplant Orientation</div></div>
+      </div>
+      <div class="content-col">
+        <div class="col-header"><div class="col-icon icon-workshop">⚡</div><span class="col-title">Workshops</span></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1qPJGbIhEqh1GhbVcL2LYCas4IwfzRVD6M705mfg11Uk/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Workshop 1: irAE Management — Cases A &amp; B</div><div class="activity-meta"><span class="activity-time">30 min · Pairs</span><span class="activity-obj">Obj 47</span><span class="activity-obj">Obj 49</span></div></div></a></div>
+        <div class="activity-item"><a class="activity-link" href="https://docs.google.com/document/d/1wbLDZhB0HPvp8c0Fh-lzIQ4MhVfcdAU-XPBaDjyo5cA/edit" target="_blank"><svg class="activity-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div class="activity-link-text"><div class="activity-name">Synthesis Activity — Mr. James Owusu (4-Reveal Case)</div><div class="activity-meta"><span class="activity-time">90 min · Teams of 3</span><span class="activity-obj">Obj 46</span><span class="activity-obj">Obj 47</span><span class="activity-obj">Obj 48</span><span class="activity-obj">Obj 49</span></div></div></a></div>
+        <div class="activity-coming"><svg class="activity-link-icon" style="opacity:0.4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg><div><div class="activity-name">Reflection Activity — Letter to Future Self</div><div class="activity-meta"><span style="font-size:11px;color:var(--text-muted)">Obj 50 · Coming soon</span></div></div></div>
+        <a class="quiz-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe7CzkV0xWZYUHLm8e-tOis1eRoywAsViB7ev5Uv9pKihJezA/viewform?usp=header" target="_blank"><div><div class="quiz-btn-text">📝 Day 10 Daily Quiz</div><div class="quiz-btn-sub">Complete end of day · Formative</div></div></a>
+        <div style="margin-top:.5rem;padding:10px 12px;border-radius:8px;background:var(--teal-light);border:1px solid rgba(29,158,117,0.2)"><div style="font-size:11px;font-weight:600;color:#0f6e56">ALSO ON DAY 10</div><div style="font-size:12px;color:#0f6e56;margin-top:3px">Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLScVMvdnF0oAboY4mzXIoEiWVpt9PyadTHHNjx_rBl326WcqQQ/viewform?usp=header" target="_blank" style="color:#0f6e56;font-weight:600">Post-Test ↗</a> and the <a href="https://docs.google.com/forms/d/e/1FAIpQLSe8tqkTal_BIpuI4DRjzq_cGzN7_N9baoh3M29WULWpLdGQqw/viewform?usp=header" target="_blank" style="color:#0f6e56;font-weight:600">Self-Efficacy Survey (Post) ↗</a></div></div>
+      </div>
+    </div>
+    <div class="obj-strip"><span class="obj-strip-label">Objectives</span><span class="obj-pill">Obj 46 — CRS and ICANS recognition</span><span class="obj-pill">Obj 47 — irAE grade-based management</span><span class="obj-pill">Obj 48 — NGS and ctDNA clinical application</span><span class="obj-pill">Obj 49 — Cellular therapy &amp; transplant orientation</span><span class="obj-pill">Obj 50 — Structured reflection &amp; goal-setting</span></div>
+  </div>
+</div>
+
+<!-- BOTTOM ASSESSMENT REMINDER -->
+<div style="margin-top:2rem;background:var(--white);border:1px solid rgba(29,158,117,0.3);border-radius:16px;padding:1.5rem 2rem;text-align:center">
+  <div style="font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-bottom:.75rem">Curriculum Complete — Final Assessments</div>
+  <div style="font-size:14px;color:var(--text-primary);margin-bottom:1.25rem">You've finished all 10 days. Please complete the post-curriculum assessments below.</div>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center">
+    <a class="assess-btn assess-btn-post" href="https://docs.google.com/forms/d/e/1FAIpQLScVMvdnF0oAboY4mzXIoEiWVpt9PyadTHHNjx_rBl326WcqQQ/viewform?usp=header" target="_blank">✅ Post-Test — Complete on Day 10</a>
+    <a class="assess-btn assess-btn-efficacy" href="https://docs.google.com/forms/d/e/1FAIpQLSe8tqkTal_BIpuI4DRjzq_cGzN7_N9baoh3M29WULWpLdGQqw/viewform?usp=header" target="_blank">📊 Self-Efficacy Survey — Pre, Post &amp; 3-Month</a>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<footer class="site-footer">
+  Hematology/Oncology Fellowship Orientation Curriculum &nbsp;·&nbsp; 10 Days &nbsp;·&nbsp; 50 Learning Objectives &nbsp;·&nbsp; ACGME Aligned
+</footer>
+
+<script>
+function toggleDay(id){
+  const card=document.getElementById(id);
+  card.classList.toggle('open');
+}
+document.getElementById('day1').classList.add('open');
+</script>
+</body>
+</html>
